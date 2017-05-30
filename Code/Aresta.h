@@ -1,5 +1,5 @@
 #include <iostream>
-#include Vertice.h
+#include "Vertice.h"
 
 class Aresta
 {
@@ -16,4 +16,4 @@ class Aresta
 		~Aresta();
 
 
-}
+};
