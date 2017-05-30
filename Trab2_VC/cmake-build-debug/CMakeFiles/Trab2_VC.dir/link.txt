@@ -1,0 +1,1 @@
+/usr/bin/c++   -g   CMakeFiles/Trab2_VC.dir/main.cpp.o CMakeFiles/Trab2_VC.dir/Vertice.cpp.o  -o Trab2_VC 

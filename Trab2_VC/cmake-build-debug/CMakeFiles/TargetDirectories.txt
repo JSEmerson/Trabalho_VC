@@ -1,0 +1,3 @@
+/home/emerson/Trab2_VC/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/emerson/Trab2_VC/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/emerson/Trab2_VC/cmake-build-debug/CMakeFiles/Trab2_VC.dir
