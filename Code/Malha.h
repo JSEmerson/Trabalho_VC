@@ -1,11 +1,17 @@
 #include "Celula.h"
-/** Necessita finalizar a estrutura
+#include <vector>
+
+/** NECESSITA FINALIZAR A ESTRUTURA
+ *  Estrutura que guarda as celulas e as operacoes 
+ *  Algoritmo Forca Bruta e Marching Squares para
+ *  deteccao de isolinhas (ou curvas de nivel ou ainda
+ *  superficies equipotenciais)
  */ 
 
 class Malha
 {
 	private:
-		Celula* celulas;
+		std::vector<Celula> celulas; //<vector que guarda as celulas 
 		int linhas;
 		int colunas;
 	public:
