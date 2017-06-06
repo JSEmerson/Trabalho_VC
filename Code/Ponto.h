@@ -6,7 +6,7 @@ class Ponto
 		float x;
 		float y;
 		float z;
-		float intensidade;
+		float intensidade; //Intensidade do campo escalar
 
 	private:
 		Ponto();
