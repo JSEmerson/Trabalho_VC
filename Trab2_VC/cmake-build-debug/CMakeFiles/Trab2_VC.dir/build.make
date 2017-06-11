@@ -105,19 +105,97 @@ CMakeFiles/Trab2_VC.dir/Vertice.cpp.o.provides: CMakeFiles/Trab2_VC.dir/Vertice.
 CMakeFiles/Trab2_VC.dir/Vertice.cpp.o.provides.build: CMakeFiles/Trab2_VC.dir/Vertice.cpp.o
 
 
+CMakeFiles/Trab2_VC.dir/Celula.cpp.o: CMakeFiles/Trab2_VC.dir/flags.make
+CMakeFiles/Trab2_VC.dir/Celula.cpp.o: ../Celula.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/emerson/Trab2_VC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Trab2_VC.dir/Celula.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Trab2_VC.dir/Celula.cpp.o -c /home/emerson/Trab2_VC/Celula.cpp
+
+CMakeFiles/Trab2_VC.dir/Celula.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Trab2_VC.dir/Celula.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/emerson/Trab2_VC/Celula.cpp > CMakeFiles/Trab2_VC.dir/Celula.cpp.i
+
+CMakeFiles/Trab2_VC.dir/Celula.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Trab2_VC.dir/Celula.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/emerson/Trab2_VC/Celula.cpp -o CMakeFiles/Trab2_VC.dir/Celula.cpp.s
+
+CMakeFiles/Trab2_VC.dir/Celula.cpp.o.requires:
+
+.PHONY : CMakeFiles/Trab2_VC.dir/Celula.cpp.o.requires
+
+CMakeFiles/Trab2_VC.dir/Celula.cpp.o.provides: CMakeFiles/Trab2_VC.dir/Celula.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Trab2_VC.dir/build.make CMakeFiles/Trab2_VC.dir/Celula.cpp.o.provides.build
+.PHONY : CMakeFiles/Trab2_VC.dir/Celula.cpp.o.provides
+
+CMakeFiles/Trab2_VC.dir/Celula.cpp.o.provides.build: CMakeFiles/Trab2_VC.dir/Celula.cpp.o
+
+
+CMakeFiles/Trab2_VC.dir/Aresta.cpp.o: CMakeFiles/Trab2_VC.dir/flags.make
+CMakeFiles/Trab2_VC.dir/Aresta.cpp.o: ../Aresta.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/emerson/Trab2_VC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Trab2_VC.dir/Aresta.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Trab2_VC.dir/Aresta.cpp.o -c /home/emerson/Trab2_VC/Aresta.cpp
+
+CMakeFiles/Trab2_VC.dir/Aresta.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Trab2_VC.dir/Aresta.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/emerson/Trab2_VC/Aresta.cpp > CMakeFiles/Trab2_VC.dir/Aresta.cpp.i
+
+CMakeFiles/Trab2_VC.dir/Aresta.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Trab2_VC.dir/Aresta.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/emerson/Trab2_VC/Aresta.cpp -o CMakeFiles/Trab2_VC.dir/Aresta.cpp.s
+
+CMakeFiles/Trab2_VC.dir/Aresta.cpp.o.requires:
+
+.PHONY : CMakeFiles/Trab2_VC.dir/Aresta.cpp.o.requires
+
+CMakeFiles/Trab2_VC.dir/Aresta.cpp.o.provides: CMakeFiles/Trab2_VC.dir/Aresta.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Trab2_VC.dir/build.make CMakeFiles/Trab2_VC.dir/Aresta.cpp.o.provides.build
+.PHONY : CMakeFiles/Trab2_VC.dir/Aresta.cpp.o.provides
+
+CMakeFiles/Trab2_VC.dir/Aresta.cpp.o.provides.build: CMakeFiles/Trab2_VC.dir/Aresta.cpp.o
+
+
+CMakeFiles/Trab2_VC.dir/Malha.cpp.o: CMakeFiles/Trab2_VC.dir/flags.make
+CMakeFiles/Trab2_VC.dir/Malha.cpp.o: ../Malha.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/emerson/Trab2_VC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Trab2_VC.dir/Malha.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Trab2_VC.dir/Malha.cpp.o -c /home/emerson/Trab2_VC/Malha.cpp
+
+CMakeFiles/Trab2_VC.dir/Malha.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Trab2_VC.dir/Malha.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/emerson/Trab2_VC/Malha.cpp > CMakeFiles/Trab2_VC.dir/Malha.cpp.i
+
+CMakeFiles/Trab2_VC.dir/Malha.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Trab2_VC.dir/Malha.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/emerson/Trab2_VC/Malha.cpp -o CMakeFiles/Trab2_VC.dir/Malha.cpp.s
+
+CMakeFiles/Trab2_VC.dir/Malha.cpp.o.requires:
+
+.PHONY : CMakeFiles/Trab2_VC.dir/Malha.cpp.o.requires
+
+CMakeFiles/Trab2_VC.dir/Malha.cpp.o.provides: CMakeFiles/Trab2_VC.dir/Malha.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Trab2_VC.dir/build.make CMakeFiles/Trab2_VC.dir/Malha.cpp.o.provides.build
+.PHONY : CMakeFiles/Trab2_VC.dir/Malha.cpp.o.provides
+
+CMakeFiles/Trab2_VC.dir/Malha.cpp.o.provides.build: CMakeFiles/Trab2_VC.dir/Malha.cpp.o
+
+
 # Object files for target Trab2_VC
 Trab2_VC_OBJECTS = \
 "CMakeFiles/Trab2_VC.dir/main.cpp.o" \
-"CMakeFiles/Trab2_VC.dir/Vertice.cpp.o"
+"CMakeFiles/Trab2_VC.dir/Vertice.cpp.o" \
+"CMakeFiles/Trab2_VC.dir/Celula.cpp.o" \
+"CMakeFiles/Trab2_VC.dir/Aresta.cpp.o" \
+"CMakeFiles/Trab2_VC.dir/Malha.cpp.o"
 
 # External object files for target Trab2_VC
 Trab2_VC_EXTERNAL_OBJECTS =
 
 Trab2_VC: CMakeFiles/Trab2_VC.dir/main.cpp.o
 Trab2_VC: CMakeFiles/Trab2_VC.dir/Vertice.cpp.o
+Trab2_VC: CMakeFiles/Trab2_VC.dir/Celula.cpp.o
+Trab2_VC: CMakeFiles/Trab2_VC.dir/Aresta.cpp.o
+Trab2_VC: CMakeFiles/Trab2_VC.dir/Malha.cpp.o
 Trab2_VC: CMakeFiles/Trab2_VC.dir/build.make
 Trab2_VC: CMakeFiles/Trab2_VC.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/emerson/Trab2_VC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Trab2_VC"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/emerson/Trab2_VC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Trab2_VC"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Trab2_VC.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -127,6 +205,9 @@ CMakeFiles/Trab2_VC.dir/build: Trab2_VC
 
 CMakeFiles/Trab2_VC.dir/requires: CMakeFiles/Trab2_VC.dir/main.cpp.o.requires
 CMakeFiles/Trab2_VC.dir/requires: CMakeFiles/Trab2_VC.dir/Vertice.cpp.o.requires
+CMakeFiles/Trab2_VC.dir/requires: CMakeFiles/Trab2_VC.dir/Celula.cpp.o.requires
+CMakeFiles/Trab2_VC.dir/requires: CMakeFiles/Trab2_VC.dir/Aresta.cpp.o.requires
+CMakeFiles/Trab2_VC.dir/requires: CMakeFiles/Trab2_VC.dir/Malha.cpp.o.requires
 
 .PHONY : CMakeFiles/Trab2_VC.dir/requires
 

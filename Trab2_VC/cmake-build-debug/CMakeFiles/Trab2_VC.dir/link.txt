@@ -1,1 +1,1 @@
-/usr/bin/c++   -g   CMakeFiles/Trab2_VC.dir/main.cpp.o CMakeFiles/Trab2_VC.dir/Vertice.cpp.o  -o Trab2_VC 
+/usr/bin/c++   -g   CMakeFiles/Trab2_VC.dir/main.cpp.o CMakeFiles/Trab2_VC.dir/Vertice.cpp.o CMakeFiles/Trab2_VC.dir/Celula.cpp.o CMakeFiles/Trab2_VC.dir/Aresta.cpp.o CMakeFiles/Trab2_VC.dir/Malha.cpp.o  -o Trab2_VC 

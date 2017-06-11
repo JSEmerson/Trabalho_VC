@@ -84,6 +84,24 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/emerson/Trab2_VC/Aresta.cpp">
+			<Option target="Trab2_VC"/>
+		</Unit>
+		<Unit filename="/home/emerson/Trab2_VC/Aresta.h">
+			<Option target="Trab2_VC"/>
+		</Unit>
+		<Unit filename="/home/emerson/Trab2_VC/Celula.cpp">
+			<Option target="Trab2_VC"/>
+		</Unit>
+		<Unit filename="/home/emerson/Trab2_VC/Celula.h">
+			<Option target="Trab2_VC"/>
+		</Unit>
+		<Unit filename="/home/emerson/Trab2_VC/Malha.cpp">
+			<Option target="Trab2_VC"/>
+		</Unit>
+		<Unit filename="/home/emerson/Trab2_VC/Malha.h">
+			<Option target="Trab2_VC"/>
+		</Unit>
 		<Unit filename="/home/emerson/Trab2_VC/Vertice.cpp">
 			<Option target="Trab2_VC"/>
 		</Unit>

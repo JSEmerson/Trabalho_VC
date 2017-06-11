@@ -123,6 +123,87 @@ Trab2_VC/fast:
 	$(MAKE) -f CMakeFiles/Trab2_VC.dir/build.make CMakeFiles/Trab2_VC.dir/build
 .PHONY : Trab2_VC/fast
 
+Aresta.o: Aresta.cpp.o
+
+.PHONY : Aresta.o
+
+# target to build an object file
+Aresta.cpp.o:
+	$(MAKE) -f CMakeFiles/Trab2_VC.dir/build.make CMakeFiles/Trab2_VC.dir/Aresta.cpp.o
+.PHONY : Aresta.cpp.o
+
+Aresta.i: Aresta.cpp.i
+
+.PHONY : Aresta.i
+
+# target to preprocess a source file
+Aresta.cpp.i:
+	$(MAKE) -f CMakeFiles/Trab2_VC.dir/build.make CMakeFiles/Trab2_VC.dir/Aresta.cpp.i
+.PHONY : Aresta.cpp.i
+
+Aresta.s: Aresta.cpp.s
+
+.PHONY : Aresta.s
+
+# target to generate assembly for a file
+Aresta.cpp.s:
+	$(MAKE) -f CMakeFiles/Trab2_VC.dir/build.make CMakeFiles/Trab2_VC.dir/Aresta.cpp.s
+.PHONY : Aresta.cpp.s
+
+Celula.o: Celula.cpp.o
+
+.PHONY : Celula.o
+
+# target to build an object file
+Celula.cpp.o:
+	$(MAKE) -f CMakeFiles/Trab2_VC.dir/build.make CMakeFiles/Trab2_VC.dir/Celula.cpp.o
+.PHONY : Celula.cpp.o
+
+Celula.i: Celula.cpp.i
+
+.PHONY : Celula.i
+
+# target to preprocess a source file
+Celula.cpp.i:
+	$(MAKE) -f CMakeFiles/Trab2_VC.dir/build.make CMakeFiles/Trab2_VC.dir/Celula.cpp.i
+.PHONY : Celula.cpp.i
+
+Celula.s: Celula.cpp.s
+
+.PHONY : Celula.s
+
+# target to generate assembly for a file
+Celula.cpp.s:
+	$(MAKE) -f CMakeFiles/Trab2_VC.dir/build.make CMakeFiles/Trab2_VC.dir/Celula.cpp.s
+.PHONY : Celula.cpp.s
+
+Malha.o: Malha.cpp.o
+
+.PHONY : Malha.o
+
+# target to build an object file
+Malha.cpp.o:
+	$(MAKE) -f CMakeFiles/Trab2_VC.dir/build.make CMakeFiles/Trab2_VC.dir/Malha.cpp.o
+.PHONY : Malha.cpp.o
+
+Malha.i: Malha.cpp.i
+
+.PHONY : Malha.i
+
+# target to preprocess a source file
+Malha.cpp.i:
+	$(MAKE) -f CMakeFiles/Trab2_VC.dir/build.make CMakeFiles/Trab2_VC.dir/Malha.cpp.i
+.PHONY : Malha.cpp.i
+
+Malha.s: Malha.cpp.s
+
+.PHONY : Malha.s
+
+# target to generate assembly for a file
+Malha.cpp.s:
+	$(MAKE) -f CMakeFiles/Trab2_VC.dir/build.make CMakeFiles/Trab2_VC.dir/Malha.cpp.s
+.PHONY : Malha.cpp.s
+
 Vertice.o: Vertice.cpp.o
 
 .PHONY : Vertice.o
@@ -186,6 +267,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Trab2_VC"
+	@echo "... Aresta.o"
+	@echo "... Aresta.i"
+	@echo "... Aresta.s"
+	@echo "... Celula.o"
+	@echo "... Celula.i"
+	@echo "... Celula.s"
+	@echo "... Malha.o"
+	@echo "... Malha.i"
+	@echo "... Malha.s"
 	@echo "... Vertice.o"
 	@echo "... Vertice.i"
 	@echo "... Vertice.s"

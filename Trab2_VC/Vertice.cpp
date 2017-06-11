@@ -1,19 +1,18 @@
 #include <iostream>
 #include "Vertice.h"
 
-using namespace std;
-
 Vertice::Vertice()
 {
-
+    id = 0;
 }
 
-void Vertice::definirVertice(float xx, float yy, float it)
+void Vertice::definirVertice(float xx, float yy, float it, int i)
 {
     x = xx;
     y = yy;
     z = 0;
     intensidade = it;
+    id = i;
 }
 
 void Vertice::definirVertice(float xx, float yy, float zz, float it)
@@ -22,6 +21,7 @@ void Vertice::definirVertice(float xx, float yy, float zz, float it)
     y = yy;
     z = zz;
     intensidade = it;
+    id = id + 1;
 }
 
 float Vertice::consultarX()
@@ -42,6 +42,11 @@ float Vertice::consultarZ()
 float Vertice::consultarIntensidade()
 {
     return intensidade;
+}
+
+int Vertice::consultarId()
+{
+    return id;
 }
 
 Vertice::~Vertice()

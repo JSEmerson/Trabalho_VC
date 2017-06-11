@@ -6,6 +6,40 @@
 
 #IncludeRegexTransform: 
 
+/home/emerson/Trab2_VC/Aresta.cpp
+Aresta.h
+/home/emerson/Trab2_VC/Aresta.h
+
+/home/emerson/Trab2_VC/Aresta.h
+iostream
+-
+Vertice.h
+/home/emerson/Trab2_VC/Vertice.h
+
+/home/emerson/Trab2_VC/Celula.cpp
+Aresta.h
+/home/emerson/Trab2_VC/Aresta.h
+Celula.h
+/home/emerson/Trab2_VC/Celula.h
+
+/home/emerson/Trab2_VC/Celula.h
+Aresta.h
+/home/emerson/Trab2_VC/Aresta.h
+
+/home/emerson/Trab2_VC/Malha.cpp
+Malha.h
+/home/emerson/Trab2_VC/Malha.h
+
+/home/emerson/Trab2_VC/Malha.h
+Celula.h
+/home/emerson/Trab2_VC/Celula.h
+vector
+-
+string
+-
+fstream
+-
+
 /home/emerson/Trab2_VC/Vertice.cpp
 iostream
 -
@@ -17,4 +51,12 @@ Vertice.h
 /home/emerson/Trab2_VC/main.cpp
 iostream
 -
+Vertice.h
+/home/emerson/Trab2_VC/Vertice.h
+Aresta.h
+/home/emerson/Trab2_VC/Aresta.h
+Celula.h
+/home/emerson/Trab2_VC/Celula.h
+Malha.h
+/home/emerson/Trab2_VC/Malha.h
 
