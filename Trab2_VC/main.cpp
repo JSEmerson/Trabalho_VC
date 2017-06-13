@@ -6,7 +6,7 @@
 using namespace std;
 
 int main() {
-/*//Testando a porra toda
+/*//Testando a p**** toda
     Vertice* v1 = new Vertice();
     Vertice* v2 = new Vertice();
     Vertice* v3 = new Vertice();
