@@ -46,31 +46,31 @@ void Malha::gerarMalha(string txt)
             v4->definirVertice(x, y, magn, cont+4);
 
             cont = cont + 4;
-            
-			//Cria as arestas
+
+            //Cria as arestas
             a1 = new Aresta();
             a1->definirAresta(v1, v2);
-            
-			a2 = new Aresta();
+
+            a2 = new Aresta();
             a2->definirAresta(v2, v3);
-            
-			a3 = new Aresta();
+
+            a3 = new Aresta();
             a3->definirAresta(v3, v4);
-            
-			a4 = new Aresta();
+
+            a4 = new Aresta();
             a4->definirAresta(v4, v1);
-            
-			//Cria a celula
+
+            //Cria a celula
             cel = new Celula();
             cel->definirCelula(a1, a2, a3, a4);
-            
-			//Armazena a celula na malha
+
+            //Armazena a celula na malha
             inserirCelula(cel);
         }
     }
     arquivo.close();
 
-	//No linux, ele cria uma celula extra.
+    //No linux, ele cria uma celula extra.
     celulas->pop_back();
 }
 
@@ -99,19 +99,19 @@ void Malha::imprimirMalha()
              v4->consultarIntensidade() << "," << v4->consultarId() << ")" << endl;
     }
 
-	/* Faz sentido isso aqui??
+    /* Faz sentido isso aqui??
     v->a
    (*v).a
-	*/
+    */
 
 }
 
 void Malha::troca(float *a, float *b)
 {
-	float aux;
-	aux = *a;
-	*a = *b;
-	*b = aux;
+    float aux;
+    aux = *a;
+    *a = *b;
+    *b = aux;
 }
 
 /* Funcao que determina os pontos que possuem a mesma intensidade
@@ -119,39 +119,52 @@ void Malha::troca(float *a, float *b)
  */
 
 void Malha::curvasDeNivel_forcaBruta(float val)
-{   
-	Celula *c;
+{
+    Celula *c;
     Aresta *arestas;
-    Vertice *v1,*v2,*v3,*v4;
-	float magnMin, magnMax;
+    Vertice *v1,*v2,*v3,*v4,*q;
+    float magnMin, magnMax;
+    float x,y;
 
-	//lista que guardara os pontos escolhidos
-	vector<Vertice> isoVertices; //falta de nome melhor..."
+    //lista que guardara os pontos escolhidos
+    vector<Vertice> isoVertices; //falta de nome melhor..."
 
-	//percorre todas as celulas buscando quais pontos tem mesma intensidade
-	
-	for (int i = 0; i < celulas->size(); i++)
-	{
-		c = celulas->at(i);
-		arestas = c->consultarArestas();
+    //percorre todas as celulas buscando quais pontos tem mesma intensidade
 
-		for (int j = 0; j < 4; j++)
-		{
-			v1 = arestas[i].consultarVertice1();
-			v2 = arestas[i].consultarVertice2();
+    for (int i = 0; i < celulas->size(); i++)
+    {
+        c = celulas->at(i);
+        arestas = c->consultarArestas();
 
-			magnMin = v1->consultarIntensidade();
-			magnMax = v2->consultarIntensidade();
+        for (int j = 0; j < 4; j++)
+        {
+            v1 = arestas[i].consultarVertice1();
+            v2 = arestas[i].consultarVertice2();
 
-			if (magnMin > magnMax)
-			{
-				troca(&magnMin,&magnMax);
-			}
+            magnMin = v1->consultarIntensidade();
+            magnMax = v2->consultarIntensidade();
 
-			//... precisa ser implementado... ainda nao entendi direito... :(
-		}	
-	}
-	
+            if (magnMin > magnMax)
+            {
+                troca(&magnMin,&magnMax);
+            }
+
+            if(val > magnMin && val < magnMax)
+                if(v2->consultarX() - v1->consultarX() == 0) //Aresta vertical
+                {
+                    y = ((val - v1->consultarIntensidade()) * (v2->consultarY() - v1->consultarY())) /
+                        (v2->consultarIntensidade() - v1->consultarIntensidade()) + v1->consultarY()
+                }
+                else //Aresta horizontal
+                {
+                    x = ((val - v1->consultarIntensidade()) * (v2->consultarX() - v1->consultarX())) /
+                        (v2->consultarIntensidade() - v1->consultarIntensidade()) + v1->consultarX()
+                }
+
+
+        }
+    }
+
 
 }
 Malha::~Malha()
