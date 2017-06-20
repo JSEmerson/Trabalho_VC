@@ -23,49 +23,54 @@ void Malha::gerarMalha(string txt)
         Aresta *a1, *a2, *a3, *a4;
         Celula *cel;
         int x,y;
-        float it;
-        int lin,col,cont=0;
+        float magn;
+        int lin, col, cont = 0;
 
         //Le a dimensao da malha
         arquivo >> lin >> col;
 
-        //Aloca vetor de celulas
-        //celulas.reserve(lin*col);
-
         //Faz a leitura dos pontos, cria os vertices, arestas, celulas e aloca no vetor da malha
         while(!arquivo.eof()) {
             //Cria os vertices
-            arquivo >> x >> y >> it;
+            arquivo >> x >> y >> magn;
             v1 = new Vertice();
-            v1->definirVertice(x, y, it, cont+1);
-            arquivo >> x >> y >> it;
+            v1->definirVertice(x, y, magn, cont+1);
+            arquivo >> x >> y >> magn;
             v2 = new Vertice();
-            v2->definirVertice(x, y, it, cont+2);
-            arquivo >> x >> y >> it;
+            v2->definirVertice(x, y, magn, cont+2);
+            arquivo >> x >> y >> magn;
             v3 = new Vertice();
-            v3->definirVertice(x, y, it, cont+3);
-            arquivo >> x >> y >> it;
+            v3->definirVertice(x, y, magn, cont+3);
+            arquivo >> x >> y >> magn;
             v4 = new Vertice();
-            v4->definirVertice(x, y, it, cont+4);
+            v4->definirVertice(x, y, magn, cont+4);
+
             cont = cont + 4;
-            //Cria as arestas
+            
+			//Cria as arestas
             a1 = new Aresta();
             a1->definirAresta(v1, v2);
-            a2 = new Aresta();
+            
+			a2 = new Aresta();
             a2->definirAresta(v2, v3);
-            a3 = new Aresta();
+            
+			a3 = new Aresta();
             a3->definirAresta(v3, v4);
-            a4 = new Aresta();
+            
+			a4 = new Aresta();
             a4->definirAresta(v4, v1);
-            //Cria a celula
+            
+			//Cria a celula
             cel = new Celula();
             cel->definirCelula(a1, a2, a3, a4);
-            //Armazena a celula na malha
+            
+			//Armazena a celula na malha
             inserirCelula(cel);
         }
     }
     arquivo.close();
-    //No linux, ele cria uma celula extra.
+
+	//No linux, ele cria uma celula extra.
     celulas->pop_back();
 }
 
@@ -94,11 +99,61 @@ void Malha::imprimirMalha()
              v4->consultarIntensidade() << "," << v4->consultarId() << ")" << endl;
     }
 
+	/* Faz sentido isso aqui??
     v->a
-            (*v).a
+   (*v).a
+	*/
 
 }
 
+void Malha::troca(float *a, float *b)
+{
+	float aux;
+	aux = *a;
+	*a = *b;
+	*b = aux;
+}
+
+/* Funcao que determina os pontos que possuem a mesma intensidade
+ * @param float val: Valor da intensidade buscada
+ */
+
+void Malha::curvasDeNivel_forcaBruta(float val)
+{   
+	Celula *c;
+    Aresta *arestas;
+    Vertice *v1,*v2,*v3,*v4;
+	float magnMin, magnMax;
+
+	//lista que guardara os pontos escolhidos
+	vector<Vertice> isoVertices; //falta de nome melhor..."
+
+	//percorre todas as celulas buscando quais pontos tem mesma intensidade
+	
+	for (int i = 0; i < celulas->size(); i++)
+	{
+		c = celulas->at(i);
+		arestas = c->consultarArestas();
+
+		for (int j = 0; j < 4; j++)
+		{
+			v1 = arestas[i].consultarVertice1();
+			v2 = arestas[i].consultarVertice2();
+
+			magnMin = v1->consultarIntensidade();
+			magnMax = v2->consultarIntensidade();
+
+			if (magnMin > magnMax)
+			{
+				troca(&magnMin,&magnMax);
+			}
+
+			//... precisa ser implementado... ainda nao entendi direito... :(
+		}	
+	}
+	
+
+}
 Malha::~Malha()
 {
     delete celulas;
