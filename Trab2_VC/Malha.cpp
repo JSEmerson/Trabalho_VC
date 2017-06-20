@@ -122,12 +122,13 @@ void Malha::curvasDeNivel_forcaBruta(float val)
 {
     Celula *c;
     Aresta *arestas;
-    Vertice *v1,*v2,*v3,*v4,*q;
+    Vertice *v1,*v2,*v3,*v4,*q,*aux;
     float magnMin, magnMax;
     float x,y;
+    int cont = 0;
 
     //lista que guardara os pontos escolhidos
-    vector<Vertice> isoVertices; //falta de nome melhor..."
+    vector<Vertice*> *verticesContorno;
 
     //percorre todas as celulas buscando quais pontos tem mesma intensidade
 
@@ -141,27 +142,50 @@ void Malha::curvasDeNivel_forcaBruta(float val)
             v1 = arestas[i].consultarVertice1();
             v2 = arestas[i].consultarVertice2();
 
+            if(v1->consultarIntensidade() > v2->consultarIntensidade())
+            {
+                aux = v1;
+                v1 = v2;
+                v2 = aux;
+            }
             magnMin = v1->consultarIntensidade();
             magnMax = v2->consultarIntensidade();
 
-            if (magnMin > magnMax)
+            /*if (magnMin > magnMax)
             {
                 troca(&magnMin,&magnMax);
-            }
+            }*/
 
-            if(val > magnMin && val < magnMax)
-                if(v2->consultarX() - v1->consultarX() == 0) //Aresta vertical
+            //Faz a interpolacao para o caso do escalar estar entre as magnitudes dos vertices
+            if((val > magnMin && val < magnMax))
+            {
+                if (v2->consultarX() - v1->consultarX() == 0) //Aresta vertical
                 {
                     y = ((val - v1->consultarIntensidade()) * (v2->consultarY() - v1->consultarY())) /
-                        (v2->consultarIntensidade() - v1->consultarIntensidade()) + v1->consultarY()
+                        (v2->consultarIntensidade() - v1->consultarIntensidade()) + v1->consultarY();
                 }
                 else //Aresta horizontal
                 {
                     x = ((val - v1->consultarIntensidade()) * (v2->consultarX() - v1->consultarX())) /
-                        (v2->consultarIntensidade() - v1->consultarIntensidade()) + v1->consultarX()
+                        (v2->consultarIntensidade() - v1->consultarIntensidade()) + v1->consultarX();
                 }
-
-
+                q = new Vertice();
+                q->definirVertice(x,y,val,cont);
+                cont++;
+                verticesContorno->push_back(q);
+            }else if(val == magnMin && val != magnMax)
+            {
+                q = new Vertice();
+                q->definirVertice(v1->consultarX(),v1->consultarY(),val,cont);
+                cont++;
+                verticesContorno->push_back(q);
+            }else if(val == magnMax && val != magnMin)
+            {
+                q = new Vertice();
+                q->definirVertice(v2->consultarX(),v2->consultarY(),val,cont);
+                cont++;
+                verticesContorno->push_back(q);
+            }
         }
     }
 
