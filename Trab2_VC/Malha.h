@@ -18,13 +18,15 @@ class Malha
 {
 private:
     vector<Celula*> *celulas; //vector que guarda as celulas
-    void troca(float *a, float *b); //funcao que troca o conteudo de duas variaveis float
 public:
     Malha();
     void inserirCelula(Celula* cel);
+    void troca(Vertice **a, Vertice **b);
     void gerarMalha(string txt);
     void imprimirMalha();
-    void curvasDeNivel_forcaBruta(float val);
+    void curvasDeNivel_forcaBruta(float val, string nomeVTK);
+    void salvarResultadoVTK(vector<Vertice*> *verticesContorno, vector<int> connect, string nomeVTK);
+    int buscarVertice(float x, float y,vector<Vertice*> *verticesContorno);
     ~Malha();
 
 };

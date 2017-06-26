@@ -29,6 +29,10 @@ Aresta.h
 /home/emerson/Trab2_VC/Malha.cpp
 Malha.h
 /home/emerson/Trab2_VC/Malha.h
+fstream
+-
+string
+-
 
 /home/emerson/Trab2_VC/Malha.h
 Celula.h
@@ -50,6 +54,8 @@ Vertice.h
 
 /home/emerson/Trab2_VC/main.cpp
 iostream
+-
+string
 -
 Vertice.h
 /home/emerson/Trab2_VC/Vertice.h

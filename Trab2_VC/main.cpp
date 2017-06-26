@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "Vertice.h"
 #include "Aresta.h"
 #include "Celula.h"
@@ -51,6 +52,7 @@ int main() {
     Malha *m1;
     m1 = new Malha();
     m1->gerarMalha("/home/emerson/Trab2_VC/dados2d.txt");
-    m1->imprimirMalha();
+    //m1->imprimirMalha();
+    m1->curvasDeNivel_forcaBruta(0.48,"/home/emerson/Trab2_VC/output/teste1.vtk");
     return 0;
 }
