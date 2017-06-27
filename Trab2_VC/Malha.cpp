@@ -1,6 +1,4 @@
 #include "Malha.h"
-#include <fstream>
-#include <string>
 
 Malha::Malha()
 {
@@ -124,7 +122,7 @@ void Malha::curvasDeNivel_forcaBruta(float val, string nomeVTK)
     Aresta *arestas;
     Vertice *v1,*v2,*q;
     float magnMin, magnMax;
-    float x,y;
+    float x,y,dx = 0.000001;
     int cont = 0, id;
 
     //lista que guardara os pontos escolhidos
@@ -187,7 +185,7 @@ void Malha::curvasDeNivel_forcaBruta(float val, string nomeVTK)
                 id = buscarVertice(v1->consultarX(),v1->consultarY(),verticesContorno);
                 if(id != -1)
                 {
-                    connect.push_back(id);
+                    //connect.push_back(id);
                     delete q;
                 }
                 else
@@ -212,7 +210,34 @@ void Malha::curvasDeNivel_forcaBruta(float val, string nomeVTK)
                     connect.push_back(q->consultarId());
                     cont++;
                 }
+            } else if(val == magnMax && val == magnMin)
+            {
+                q = new Vertice();
+                q->definirVertice(v2->consultarX(),v2->consultarY(),val,cont);
+                id = buscarVertice(v2->consultarX(),v2->consultarY(),verticesContorno);
+                if(id != -1)
+                {
+                    //connect.push_back(id);
+                    delete q;
+                }
+                else
+                {
+                    verticesContorno->push_back(q);
+                    connect.push_back(q->consultarId());
+                    id = buscarVertice(v1->consultarX(),v1->consultarY(),verticesContorno);
+                    connect.push_back(id);
+                    cont++;
+                }
             }
+        }
+    }
+    //Limpa conexoes de mesmo vertice
+    for(int i=0; i<connect.size(); i=i+2)
+    {
+        if(connect.at(i) == connect.at(i+1))
+        {
+            connect.erase(connect.begin()+i);
+            connect.erase(connect.begin()+i);
         }
     }
     salvarResultadoVTK(verticesContorno,connect,nomeVTK);
@@ -231,11 +256,6 @@ void Malha::salvarResultadoVTK(vector<Vertice*> *verticesContorno, vector<int> c
         cout << "id: "<< t->consultarId() << "(" << t->consultarX() << "," << t->consultarY() << ","
              << t->consultarIntensidade() << ")" << endl;
     }*/
-    /*//Testando connect:
-    for(int i=0; i<connect.size(); i++)
-    {
-        cout << connect.at(i) << "-";
-    }*/
     Vertice *v;
     int i;
     FILE *arquivo;
@@ -247,7 +267,7 @@ void Malha::salvarResultadoVTK(vector<Vertice*> *verticesContorno, vector<int> c
         v = verticesContorno->at(i);
         fprintf(arquivo, "%3.7f  %3.7f  %3.7f\n", v->consultarX(), v->consultarY(), v->consultarZ());
     }
-    fprintf(arquivo,"\nLINES  %d  %d\n", (int)verticesContorno->size(), 3 * (int)verticesContorno->size());
+    fprintf(arquivo,"\nLINES  %d  %d\n", (int)verticesContorno->size(), 3 * (int)connect.size()/2);
     for(i=0; i<connect.size(); i=i+2)
     {
         fprintf(arquivo, "2  %d  %d\n",connect.at(i),connect.at(i+1));

@@ -1,4 +1,3 @@
-#include <iostream>
 #include "Vertice.h"
 
 Vertice::Vertice()
